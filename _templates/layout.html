@@ -1,0 +1,37 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+{% endblock %}
+
+{% block menu %}
+
+    {% if 'singlehtml' not in builder %}
+        {%
+            set global_toc = toctree(
+                maxdepth = theme_navigation_depth|int,
+                collapse = theme_collapse_navigation,
+                includehidden = True)
+        %}
+        <!-- menu left -->
+        {{ global_toc }}
+    {% else %}
+        <!-- . -->
+        <div class="local-toc">{{ toc }}</div>
+    {% endif %}
+
+    <hr class="bg-danger border-2 border-top border-danger">
+
+    <div class="list-group text-center" style="color:#b3b3b3;">
+        <a class="text-decoration-none" href="https://github.com/jvsouza/generic_app/" title="Generic app">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+        <a class="text-decoration-none" href="https://www.linkedin.com/in/jonasvieiradesouza/" title="Jonas Vieira de Souza | Linkedin">
+            <i class="fa fa-linkedin fa-2x"></i>
+        </a>
+    </div>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/3c94ee132c.js" crossorigin="anonymous"></script>
+
+{% endblock %}

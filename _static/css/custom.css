@@ -1,0 +1,33 @@
+/* background menu left [al~l] */
+.wy-nav-side{
+	background-color: #343131cf !important;
+}
+
+/* background menu left [top] */
+.btn-info,
+.wy-dropdown-menu a:hover,
+.wy-dropdown-menu > dd > a:hover,
+.wy-menu-vertical a:active,
+.wy-nav .wy-menu-vertical a:hover,
+.wy-nav-top,
+.wy-nav-top img,
+.wy-side-nav-search,
+.wy-side-nav-search img,
+.wy-tray-item-info
+{
+    background-color: #939a91d4 !important;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/*
+a,
+a:hover,
+a:visited,
+a:focus
+{
+	text-decoration: none !important;
+}
+*/
